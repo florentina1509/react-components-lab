@@ -1,19 +1,15 @@
-// src/components/WeatherForecast/WeatherForecast.jsx
+import React from 'react';
+import WeatherIcon from './WeatherIcon';
+import WeatherData from './WeatherData';
 import './WeatherForecast.css';
 
-const WeatherForecast = ({ day, img, imgAlt, conditions, time }) => {
+function WeatherForecast({ icon, alt, day, condition, time }) {
   return (
     <div className="weather">
-      <h2>{day}</h2>
-      <img src={img} alt={imgAlt} />
-      <p>
-        <span>conditions: </span>{conditions}
-      </p>
-      <p>
-        <span>time: </span>{time}
-      </p>
+      <WeatherIcon icon={icon} alt={alt} />
+      <WeatherData day={day} condition={condition} time={time} />
     </div>
   );
-};
+}
 
 export default WeatherForecast;

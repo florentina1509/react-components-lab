@@ -43,14 +43,14 @@ const App = () => {
   return (
     <div className="app-container">
       <h1>Local Weather</h1>
-      <section>
+      <section className="weather-grid">
         {weatherForecasts.map((forecast, index) => (
           <WeatherForecast
             key={index}
             day={forecast.day}
-            img={forecast.img}
-            imgAlt={forecast.imgAlt}
-            conditions={forecast.conditions}
+            icon={forecast.img}
+            alt={forecast.imgAlt}
+            condition={forecast.conditions}
             time={forecast.time}
           />
         ))}
@@ -58,6 +58,5 @@ const App = () => {
     </div>
   );
 };
-
 
 export default App;
